@@ -41,7 +41,6 @@ function draw() {
     text(clientIndex, 100, 100);
     if (clientIndex === 0) {
         if (globalX > width) {
-            console.log(globalX-maxWidth, globalX, maxWidth)
             text("The Sixth Form College Colchester", globalX-maxWidth, height/2);
         }
         else {
