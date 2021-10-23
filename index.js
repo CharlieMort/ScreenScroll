@@ -10,6 +10,7 @@ app.use(express.static("public"))
 app.use(cors());
 
 let server = http.createServer(app);
+const PORT = process.env.PORT | 3000;
 
 let io = socketIO(server)
 
@@ -67,4 +68,4 @@ io.on("connection", (socket) => {
     })
 })
 
-server.listen(3000, () => console.log("Server Listening On Port 3000"));
+server.listen(PORT, () => console.log("Server Listening On Port 3000"));

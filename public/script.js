@@ -7,7 +7,7 @@ let preX = 0;
 
 function setup() {
     createCanvas(innerWidth, innerHeight)
-    socket = io("http://localhost:3000")
+    socket = io()
     frameRate(60)
     
     socket.on("maxWidth", (data) => {
