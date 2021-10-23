@@ -22,7 +22,6 @@ function SendX() {
     globalX += 10
     if (globalX >= maxWidth) {
         globalX = 0;
-        console.log("reset");
     }
     io.emit("posX", globalX)
     return;
