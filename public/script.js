@@ -23,6 +23,11 @@ function setup() {
     })
     socket.on("clients", (clients) => {
         clientsArr = [...clients];
+        clientsArr.map((client, idx) => {
+            if (client.id === socket.id) {
+                clientIndex = idx;
+            }
+        })
     })
     socket.on("posX", (data) => {
         globalX = data;
