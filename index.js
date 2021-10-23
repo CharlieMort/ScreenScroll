@@ -10,7 +10,7 @@ app.use(express.static("public"))
 app.use(cors());
 
 let server = http.createServer(app);
-const PORT = process.env.PORT | 3000;
+const PORT = process.env.PORT || 3000;
 
 let io = socketIO(server)
 
