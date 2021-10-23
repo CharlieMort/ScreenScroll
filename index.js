@@ -54,7 +54,7 @@ io.on("connection", (socket) => {
     socket.on("disconnect", () => {
         clients.map((client, idx) => {
             if (client.id == socket.id) {
-                clients.splice(idx)
+                clients.splice(idx, 1)
             }
         })
         globalX = 0;
@@ -64,7 +64,7 @@ io.on("connection", (socket) => {
         io.emit("maxWidth", maxWidth);
         io.emit("clients", clients);
         io.emit("posX", globalX);
-        console.log(clients);
+        console.log(clients, "clients");
     })
 })
 

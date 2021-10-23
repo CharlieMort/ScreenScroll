@@ -26,6 +26,7 @@ function setup() {
         clientsArr.map((client, idx) => {
             if (client.id === socket.id) {
                 clientIndex = idx;
+                console.log(idx);
             }
         })
     })
